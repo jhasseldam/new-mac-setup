@@ -5,3 +5,6 @@ alias l='ls -l'
 
 # Git
 alias g='git'
+
+# Kubernetes
+alias k='kubectl'

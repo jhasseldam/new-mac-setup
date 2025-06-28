@@ -19,11 +19,14 @@ code --install-extension streetsidesoftware.code-spell-checker
 
 # Install Iterm2
 brew install --cask iterm2
+cp zsh-aliases ~/.zsh_aliases
+echo '[ -f ~/.zsh_aliases ] && source ~/.zsh_aliases' >> ~/.zshrc # Link aliases
+echo 'setopt autocd' >> ~/.zshrc # Shortcut for file-tree navigation
+# Pimp Iterm2
 brew install starship # Shell prompt
 echo 'eval "$(starship init zsh)"' >> ~/.zshrc
 starship preset catppuccin-powerline --output ~/.config/starship.toml
-# ls replacement
-brew install lsd
+brew install lsd # Replacement for ls
 
 # Latest version of .NET SDK
 brew install --cask dotnet-sdk
@@ -31,8 +34,19 @@ brew install --cask dotnet-sdk
 # Brave browser
 brew install --cask brave-browser
 
-# Github CLI
-brew install gh
+# Github 
+brew install gh # Github CLI
+git config --global alias.co checkout
+git config --global alias.st status
+git config --global alias.ci commit
+git config --global alias.br branch
+git config --global user.name "Joachim V. Hasseldam"
 
 # Proton Drive
 brew install --cask proton-drive
+
+# Set VS Code settings
+cp vs-code-settings.json ~/Library/Application\ Support/Code/User/settings.json
+
+# Docker 
+brew install --cask docker
