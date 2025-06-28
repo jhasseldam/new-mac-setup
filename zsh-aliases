@@ -1,0 +1,7 @@
+# Replace ls with LSD
+alias ls='lsd'
+alias ll='ls -l'
+alias l='ls -l'
+
+# Git
+alias g='git'
