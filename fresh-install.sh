@@ -31,15 +31,20 @@ brew install lsd # Replacement for ls
 # Latest version of .NET SDK
 brew install --cask dotnet-sdk
 
+# Jetbrains Toolbox for Rider installation/updates
+brew install --cask jetbrains-toolbox
+
 # Brave browser
 brew install --cask brave-browser
 
 # Github 
 brew install gh # Github CLI
+# Convenient github shortcuts
 git config --global alias.co checkout
 git config --global alias.st status
 git config --global alias.ci commit
 git config --global alias.br branch
+# Git global settings
 git config --global user.name "Joachim V. Hasseldam"
 
 # Proton Drive
