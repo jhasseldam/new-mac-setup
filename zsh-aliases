@@ -8,3 +8,6 @@ alias g='git'
 
 # Kubernetes
 alias k='kubectl'
+
+# .NET
+alias dot='dotnet'

@@ -55,3 +55,7 @@ cp vs-code-settings.json ~/Library/Application\ Support/Code/User/settings.json
 
 # Docker 
 brew install --cask docker
+
+# Yubikey manager 
+brew install --cask yubico-yubikey-manager
+# If the pairing menu is not showing up after setting up PIV in the manager, then run: sc_auth pairing_ui -f
