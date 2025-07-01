@@ -59,3 +59,9 @@ brew install --cask docker
 # Yubikey manager 
 brew install --cask yubico-yubikey-manager
 # If the pairing menu is not showing up after setting up PIV in the manager, then run: sc_auth pairing_ui -f
+
+# PgAdmin
+brew install --cask pgadmin4
+
+# 1Password
+brew install --cask 1password
