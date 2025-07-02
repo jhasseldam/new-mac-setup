@@ -46,6 +46,8 @@ git config --global alias.ci commit
 git config --global alias.br branch
 # Git global settings
 git config --global user.name "Joachim V. Hasseldam"
+git config --global gpg.format ssh # Use the ssh key to sign commits
+git config --global commit.gpgsign true # Sign the commits by default
 
 # Proton Drive
 brew install --cask proton-drive
