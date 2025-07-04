@@ -30,6 +30,9 @@ brew install lsd # Replacement for ls
 
 # Latest version of .NET SDK
 brew install --cask dotnet-sdk
+# Optional: previous version of .NET
+brew tap isen-ng/dotnet-sdk-versions
+brew install --cask dotnet-sdk8
 
 # Jetbrains Toolbox for Rider installation/updates
 brew install --cask jetbrains-toolbox
@@ -47,7 +50,7 @@ git config --global alias.br branch
 # Git global settings
 git config --global user.name "Joachim V. Hasseldam"
 git config --global gpg.format ssh # Use the ssh key to sign commits
-git config --global commit.gpgsign true # Sign the commits by default
+git config --global commit.gpgsign true
 
 # Proton Drive
 brew install --cask proton-drive
@@ -56,7 +59,13 @@ brew install --cask proton-drive
 cp vs-code-settings.json ~/Library/Application\ Support/Code/User/settings.json
 
 # Docker 
-brew install --cask docker
+brew install --cask docker-desktop
+# Free and open source alternative for Docker Desktop
+# This solution requires docker cli and docker-buildx plugin to be installed as well
+brew install colima docker docker-buildx
+# Docker plugins
+brew install docker-buildx
+cp colima-docker-config.json ~/.docker/config.json
 
 # Yubikey manager 
 brew install --cask yubico-yubikey-manager
