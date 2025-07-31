@@ -16,6 +16,7 @@ brew install --cask visual-studio-code
 code --install-extension vscodevim.vim
 code --install-extension zhuangtongfa.Material-theme
 code --install-extension streetsidesoftware.code-spell-checker
+code --install-extension ClemensPeters.format-json
 
 # Install Iterm2
 brew install --cask iterm2
@@ -51,6 +52,7 @@ git config --global alias.br branch
 git config --global user.name "Joachim V. Hasseldam"
 git config --global gpg.format ssh # Use the ssh key to sign commits
 git config --global commit.gpgsign true
+# git config --global user.signingkey=~/.ssh/<public_key> 
 
 # Proton Drive
 brew install --cask proton-drive
@@ -58,14 +60,31 @@ brew install --cask proton-drive
 # Set VS Code settings
 cp vs-code-settings.json ~/Library/Application\ Support/Code/User/settings.json
 
-# Docker 
-brew install --cask docker-desktop
-# Free and open source alternative for Docker Desktop
-# This solution requires docker cli and docker-buildx plugin to be installed as well
-brew install colima docker docker-buildx
-# Docker plugins
-brew install docker-buildx
-cp colima-docker-config.json ~/.docker/config.json
+# Docker locally
+echo "Choose Docker option:"
+echo "1) Docker Desktop (Requires license)"
+echo "2) Colima Docker (Free)"
+echo "3) No Docker"
+echo -n "Select 1-3: "
+read choice
+case $choice in
+    1)
+      brew install --cask docker-desktop
+      brew install kubectl
+      brew install helm
+      ;;
+    2)
+      brew install colima docker docker-buildx
+      cp colima-docker-config.json ~/.docker/config.json
+      brew install kubectl
+      brew install helm
+      ;;
+    3)
+      ;;
+esac
+
+# K8s Lens IDE
+brew install --cask lens
 
 # Yubikey manager 
 brew install --cask yubico-yubikey-manager
